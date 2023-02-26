@@ -9,7 +9,7 @@ public class PrimeOrNot {
 	String input=JOptionPane.showInputDialog("type a number");
 	int prime = Integer.parseInt(input);
 Boolean isPrime=true;
-	for(int i=2; i<=prime-1;i++) {
+	for(int i=2; i<prime;i++) {
 		if(prime % i==0) {
 			isPrime=false;
 		}

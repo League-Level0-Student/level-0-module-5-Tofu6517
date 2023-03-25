@@ -9,7 +9,7 @@ public class HappyPet {
 	// this will be used to store the happiness of your pet
 	int  happinessLevel = 0;
 	public static void main(String[] args) {
-
+		int  happinessLevel = 0;
 		// 2. Ask the user what kind of pet they want to buy, and store their answer in a variable
 		String food =JOptionPane.showInputDialog("what do you want to buy.");
 	
@@ -20,36 +20,42 @@ public class HappyPet {
 			//    Make sure to customize the title and question too.
 			int task = JOptionPane.showOptionDialog(null, "Do you want to cuddle, walk, or clean your pet.", "Title", 0, JOptionPane.INFORMATION_MESSAGE, null,
 					new String[] { "cuddle", "walk", "clean" }, null);
-			JOptionPane.showInputDialog("Do you want to cuddle, walk, or clean your pet.");
+			
 			// 6. Use user input to call the appropriate method created in step 5 below.
 			HappyPet r= new HappyPet();
 			if (task==0) {
 				r.Clean();
+				happinessLevel=happinessLevel+30;
 			}
 			if (task==1) {
 				r.Walk();
+				happinessLevel=happinessLevel+20;
 			}
 			if (task==2) {
 				r.Cuddle();
+				happinessLevel=happinessLevel+10;
 			}
 			// 7. If you determine the happiness level is large enough, tell the
 			//    user that he loves his pet and use break; to exit for loop.
-			if(happinessLevel==100) {
-				
+			if(happinessLevel>=100) {
+				break;
 			}
+		
 		}
 	}
-
 	// 5. Create methods to handle each of your user selections.
 	//    Each method should create a pop-up with the pet's response (eg. cat might purr when pet), 
 	//    and INCREMENT the pet's happiness Level.
 	public void Cuddle() {
-		happinessLevel=happinessLevel+30;
+		JOptionPane.showMessageDialog(null,"purrrrrrrrrrrrrrrrrrrrr");
 		}	
 		public void Walk() {
-			happinessLevel=happinessLevel+20;
+			JOptionPane.showMessageDialog(null,"purrrrrrrrrrrrrrrrrrrrr");
 		}
 		public void Clean() {
-			happinessLevel=happinessLevel+10;
+			JOptionPane.showMessageDialog(null,"purrrrrrrrrrrrrrrrrrrrr");
 		}
-}
+	}
+	
+
+	

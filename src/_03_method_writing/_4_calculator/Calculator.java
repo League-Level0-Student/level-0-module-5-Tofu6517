@@ -31,10 +31,11 @@ public class Calculator {
 			
 		}
 		if (task==0) {
-			answer=multiply(number1,number2);
+			answer=divide(number1,number2);
 			
 		}
 		// 4) Call the result() method and put the answer in a pop-up
+		result(answer);
 	}
 
 	// 1) Make 4 static methods (add, subtract, multiply, divide)
@@ -66,7 +67,8 @@ public class Calculator {
 	//		EX: "Your answer is " + number;
 
 public static void result(int sum) {
-
-	int sum1 = Integer.parseString(sum);
+	JOptionPane.showMessageDialog(null, sum);
+		
 }
 
+}
